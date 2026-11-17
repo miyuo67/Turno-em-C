@@ -38,3 +38,13 @@ Vida do jogador =< 0: o jogador é derrotado.
 Vida do Boss =< 0: o jogador vence a batalha.
 
 Dessa forma, o projeto utiliza a batalha como uma aplicação prática do conceito de recursividade direta, além de trabalhar com funções, estruturas condicionais, switch/case, entrada de dados e gerenciamento de variáveis em C.
+
+## Ranking da Atividade Avaliativa 2
+
+- **1 — Jogar.** Informe o nome (até 80 bytes, com espaços permitidos) e escolha as ações do combate. Cada partida concluída registra o nome e a pontuação.
+- **2 — Ver ranking.** Exibe o resultado de cada partida da maior para a menor pontuação. Empates seguem a ordem de cadastro. O mesmo nome pode aparecer em várias partidas.
+- **0 — Sair.** Encerra o jogo e libera os nós da lista. O ranking fica em memória durante a sessão.
+
+Cada ponto de dano efetivo causado ao chefe vale um ponto, até o limite de 200. A vitória concede um bônus de 100 e totaliza 300 pontos. A derrota registra o dano causado. Uma partida interrompida pelo fim da entrada não é registrada.
+
+Cada nó da lista simplesmente encadeada contém um nome, a pontuação e um ponteiro para o próximo nó. A inserção usa `malloc` e percorre a lista até encontrar a posição correta. A exibição percorre os nós a partir do início. Ao sair, o programa percorre a lista e chama `free` para cada nó.
